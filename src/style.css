@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+#main-container{
+    background-image: linear-gradient(to top left, #27abc6, #3be2e8, #17edf4, #05aef7, #216ef4);
+    padding: 30px;
+    margin: 30px auto;
+    width: 50%;
+    border-radius: 10px;
+    line-height: 20px;
+}
+h1{
+    font-size: 70px;
+    padding: 5px;
+
+}
+h2{
+    font-size: 30px;
+}
+h3{
+    text-align: center;
+    text-decoration: underline;
+}
+.card-deck{
+    display: flex;
+    flex-direction: row;
+}
+.container-grid{
+    display: grid;
+    grid: repeat(1, 50px) / auto-flow 70px;
+}
+.container-grid>div{
+    background-color: antiquewhite;
+    width: 60px;
+    height: 80px;
+    border: 1px solid rgba(0, 0, 0, 0.915);
+    border-radius: 4px;
+
+}
+.day{
+    text-align: center;
+    margin-bottom: 20px;
+    transition: all 200ms ease-in-out;
+}
+.day:hover{
+    background-color: #05aef7;
+    color: black;
+}
+.weather-image{
+    width: 35px;
+    height: 33px;
+}
+
