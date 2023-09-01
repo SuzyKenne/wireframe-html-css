@@ -18,17 +18,44 @@
   </head>
   <body>
     <div class="container" id="main-container">
-      <input
-        type="text"
-        name="search cities"
-        id="name"
-        placeholder="search cities"
-				class="search-bar"
-      />
-      <h1>Buea</h1>
-      <h2>22°C</h2>
-      <p>precipitation: 90%</p>
-      <p>wind: 2km/h</p>
+      <form class="search-form" id="search-form">
+        <div class="row">
+          <div class="col-9">
+            <input type="search" placeholder="type a city.." autofocus="on" autocomplete="off" id="city-input" class="form-control shadow-sm" >
+          </div>
+          <div class="col-3">
+            <input type="submit" value="search" class="form-control btn btn-primary shadow-sm">
+          </div>
+        </div>
+      </form>
+      <h1 city="city">Buea, Cameroon</h1>
+      <ul>
+        <li id="date">Thursday 15:43</li>
+        <li>Partly cloudy</li>
+      </ul>
+
+      <div class="row">
+        <div class="col-6">
+          <div class="fix">
+            <img src="images/thunderstorms.png" alt="cloudy icon" class="weather-icon float-left">
+            <div class="float-left">
+              <span class="temperature">22</span>
+              <span class="units">
+                <a href="#" id="celsuis">°C</a>
+                 | 
+                <a href="#" id="fahrenheit">°F</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <ul>
+            <li>Precipitation: 90%</li>
+            <li>Humidity: 97%</li>
+            <li>wind: 3km/h</li>
+          </ul>
+        </div>
+      </div>
       <h3>5 Days forecast</h3>
       <div class="container-grid">
         <div class="day">
@@ -58,5 +85,8 @@
         </div>
       </div>
       <p class="by">coded by Suzy Datewo</p>
+
+      <script src="src/index.js"></script>
   </body>
 </html>
+
