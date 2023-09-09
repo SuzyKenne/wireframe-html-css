@@ -14,24 +14,28 @@
       integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Wireframe</title>
   </head>
   <body>
     <div class="container" id="main-container">
       <form class="search-form" id="search-form">
         <div class="row">
-          <div class="col-9">
+          <div class="col-6">
             <input type="search" placeholder="type a city.." autofocus="on" autocomplete="off" id="city-input" class="form-control shadow-sm" >
           </div>
           <div class="col-3">
             <input type="submit" value="search" class="form-control btn btn-primary shadow-sm">
           </div>
+          <div class="col-3">
+            <button class="btn btn-success w-100" id="current-location-button">Current</button>
+          </div>
         </div>
       </form>
-      <h1 id="city">Buea, Cameroon</h1>
+      <h1 id="city"></h1>
       <ul>
-        <li id="date">Thursday 15:43</li>
-        <li>Partly cloudy</li>
+        <li id="date"></li>
+        <li id="description"></li>
       </ul>
 
       <div class="row">
@@ -41,18 +45,15 @@
             <div class="float-left">
               <span class="temperature" id="temperature">22</span>
               <span class="units">
-                <a href="#" id="celsius">°C</a>
-                 | 
-                <a href="#" id="fahrenheit">°F</a>
+               °C
               </span>
             </div>
           </div>
         </div>
         <div class="col-6">
           <ul>
-            <li>Precipitation: 90%</li>
-            <li>Humidity: 97%</li>
-            <li>wind: 3km/h</li>
+            <li>Humidity:<span id="humidity"></span>%</li>
+            <li>wind:<span id="wind"></span> km/h</li>
           </ul>
         </div>
       </div>
